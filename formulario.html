@@ -1,0 +1,94 @@
+<!-- SE POSSIVEL APAGAR OS COMENTARIOS CASO TENHA FEITO O QUE O COMENTARIO PEDIA. :) -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <title> Manual da Quadra </title>
+</head>
+
+<!-- Cabeça do site acima -->
+
+<!-- Corpo do site Abaixo -->
+
+<body>
+    <!-- Local onde colocaremos os links para ir para o proximo site. Abaixo -->
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <section>
+                <img src="logo-site.png" alt="logo" width="100" height="100">
+        </a>
+        <nav class="navbar">
+            <!-- Ainda tem que adicionar os links dos proximos sites para as palavras chaves. -->
+            <a href="index.html"> Inicio </a>
+            <a href="objetivo.html"> Objetivo </a>
+            <a href="historia.html"> História </a>
+            <a href="regras-gerais.html"> Regras Gerais </a>
+            <a href="regras-posições.html"> Regras de Posições </a>
+            <a href="formulario.html"> Formulario </a>
+        </nav>
+        <div class="icons">
+            <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-pesquisar-ios11-16.png">
+        </div>
+        </section>
+    </header>
+
+    <section class="contato">
+        <h1>Preencha o Formulario</h1>
+        <p>Feedback do Usuário: Registre suas Críticas e Sugestões</p>
+
+        <form class="formulario">
+            <h2>Manual do Basquete - Avaliação </h2>
+
+            <div class="input-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Você é jogador a muito tempo?</label>
+                <div class="radius-group">
+                    <input type="radio" id="profsim" name="professor" value="sim" required>
+                    <label for="profsim">Sim</label>
+
+                    <input type="radio" id="profnao" name="professor" value="nao">
+                    <label for="profnao">Não</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Quais conteúdos te interessam? (Marque todos que se aplicam)</label>
+                <div class="radius-group" style="flex-direction: column; align-items: flex-start;">
+                    <label><input type="checkbox" name="interesse" value="regras"> Novas Regras</label>
+                    <label><input type="checkbox" name="interesse" value="historia"> História da Quadra </label>
+                    <label><input type="checkbox" name="interesse" value="dicas"> Dicas de Treinamento </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="mensagem">Sua Critica/Dúvida:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+            </div>
+
+            <div class="botoes-form">
+                <input type="submit" value="Enviar Inscrição">
+                <input type="reset" value="Limpar">
+            </div>
+
+        </form>
+    </section>
+
+</body>
+
+</html>

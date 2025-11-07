@@ -1,0 +1,415 @@
+/*Obs: a cada 1rem é aumentado 10px*/
+/* 1. VARIÁVEIS CSS (ROOT) */
+:root {
+    /* Cores Principais */
+    --main-color: #ff8138;
+    /* Laranja Principal / Cor de Fundo do Body */
+    --Topo: #ff6600;
+    /* Laranja para o Topo do Site */
+    --black: #13131a;
+    /* Preto */
+    --white: #fff;
+    /* Branco */
+    --light-color: #666;
+    /* Cor Secundária (a escolher) */
+    --bg: #494949;
+    /* Cor de Fundo Secundária (a escolher) */
+    --border: 0.1rem solid #000000;
+    /* Borda Padrão */
+
+    /* Tipografia e Base */
+    font-size: 10px;
+    /* Tamanho base da fonte (1rem = 10px) */
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Rolagem suave ao clicar em âncoras */
+}
+
+/* 2. RESET GERAL E ESTILOS BASE */
+
+* {
+    margin: 0;
+    /* Remove margem padrão */
+    padding: 0;
+    /* Remove padding padrão */
+    text-decoration: none;
+    /* Remove sublinhado de links */
+    border: none;
+    /* Remove borda padrão */
+    outline: none;
+    /* Remove contorno em foco (outline) */
+    transition: all 0.3s linear;
+    /* Transição suave padrão */
+    font-family: "SUSE Mono", sans-serif;
+    /* Fonte do site */
+}
+
+body {
+    background-color: var(--main-color);
+    /* Cor de fundo do site */
+    background-image: url();
+    /* Adicione a URL da imagem de fundo aqui */
+    background-repeat: no-repeat;
+    /* Evita repetição da imagem de fundo */
+    background-position: center center;
+    /* Centraliza a imagem de fundo */
+    background-size: cover;
+    /* Cobre toda a área do body */
+    background-attachment: fixed;
+    /* Mantém a imagem fixa ao rolar */
+    margin: 0rem auto;
+    /* Centraliza o bloco horizontalmente (0 para margem superior/inferior, auto para esquerda/direita) */
+    width: 96rem;
+    /* Defina uma largura máxima para o seu conteúdo */
+    max-width: 100%;
+    /* Garante que não ultrapasse a largura da tela em dispositivos menores */
+    margin-bottom: 10rem;
+    /* Espaçamento inferior do body */
+    margin-top: 13rem;
+    /* Espaço para o cabeçalho fixo */
+    position: relative;
+}
+
+.form {
+    justify-content: center;
+}
+
+section {
+    padding: 3rem 2rem;
+    /* Espaçamento interno das seções */
+    margin: 0 auto;
+    /* Centraliza as seções */
+    max-width: 2000px;
+    /* Largura máxima das seções */
+}
+
+/* 3. ESTILOS DO CABEÇALHO (HEADER) */
+
+.header {
+    position: fixed;
+    /* Fixa o cabeçalho no topo */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    /* Garante que o cabeçalho fique acima de outros elementos */
+    border-bottom: var(--border);
+    /* Borda inferior do cabeçalho */
+    background-color: var(--Topo);
+    /* Cor de fundo do cabeçalho */
+    text-transform: capitalize;
+    /* Primeira letra maiúscula em todo o texto (pode ser problemático em alguns casos) */
+}
+
+.header section {
+    display: flex;
+    /* Flexbox para layout */
+    align-items: center;
+    /* Alinha itens ao centro verticalmente */
+    justify-content: space-between;
+    /* Espaço entre logo e navegação */
+    padding-top: 0rem;
+    /* Espaçamento interno superior */
+    padding-bottom: 0rem;
+    /* Espaçamento interno inferior */
+}
+
+/* Navegação (navbar) */
+.navbar a {
+    font-size: 1.6rem;
+    /* Tamanho da fonte dos links */
+    color: var(--black);
+    /* Cor dos links */
+    margin-left: 1.5rem;
+    /* Espaçamento entre os links */
+}
+
+/* Efeito ao passar o mouse */
+.navbar a:hover {
+    color: var(--white);
+    /* Cor dos links ao passar o mouse */
+    border-bottom: 0.1rem solid var(--white);
+    /* Borda inferior ao passar o mouse */
+    padding-bottom: 0.5rem;
+    /* Espaçamento inferior */
+    font-size: 1.9rem;
+    /* Aumento de tamanho de fonte quando passar o mouse*/
+}
+
+/* 4. ESTILOS DO CONTEÚDO PRINCIPAL (RECOMENDADO PARA O ESPAÇAMENTO DO FIXED HEADER) */
+/* ESTES ESTILOS DEVEM SER USADOS PARA O CONTEÚDO QUE VEM DEPOIS DO HEADER NO HTML */
+/* Exemplo de estilo para o H1 */
+h1 {
+    font-size: 3rem;
+    /* Tamanho da fonte do título */
+    color: var(--black);
+    /* Cor do título */
+    text-align: center;
+    /* Centraliza o título */
+    padding-bottom: 2rem;
+    /* Espaçamento abaixo do título */
+}
+
+.topo-h1 {
+    color: var(--black);
+    /* Cor do título */
+    text-align: center;
+    /* Centraliza o título */
+
+    /* Configurações de fluxo para que ele apareça no topo e ocupe a largura do seu BODY */
+    width: 96rem;
+    max-width: 100%;
+    margin: 0 auto;
+    /* Centraliza o H1 dentro do fluxo do body */
+
+    background-color: var(--main-color);
+    padding: 1rem 0;
+    /* Espaçamento interno */
+
+    /* Adiciona uma margem inferior para separar do conteúdo */
+    margin-bottom: 2rem;
+}
+
+/* Exemplo de estilo para os parágrafos corrigidos */
+
+p {
+    color: var(--black);
+    /* Cor do texto dos parágrafos */
+    font-size: 1.7rem;
+    /* Tamanho da fonte dos parágrafos */
+    line-height: 1.5;
+    /* Melhora a leitura */
+    padding: 0.5rem 0;
+    /* Espaçamento vertical entre parágrafos */
+}
+
+ul
+
+/* layout da tag de ul */
+    {
+    margin: 1rem 0 1rem 4rem;
+    /* Tira todos os espaçamentos indesejados*/
+    list-style-type: none;
+    /* Remove marcadores padrão */
+}
+
+/* Layout da tag de li */
+li {
+    font-size: 1.6rem;
+    /* Tamanho da fonte dos itens da lista */
+    color: var(--black);
+    /* Cor do texto dos itens da lista */
+    margin-bottom: 0.2rem;
+    /* Espaçamento entre os itens da lista */
+    line-height: 0.8rem;
+    /* Aumenta o espaçamento entre as linhas */
+    margin-bottom: 1.2rem;
+    /* Espaçamento inferior entre os itens */
+    margin-left: 3rem;
+    /* Espaçamento à esquerda para alinhar com o marcador personalizado */
+    font-family: "SUSE Mono", sans-serif;
+    /* Fonte consistente com o resto do site */
+}
+
+/* Layout da tag th (Cabeçalho de Tabela) */
+th {
+    border: 0.1rem dashed;
+    font-size: 1.5rem;
+    padding: 0.7rem 7rem;
+    text-align: center;
+}
+
+/* Layout da tag td (Célula de Tabela) */
+td {
+    font-size: 1.2rem;
+    padding: 0.8rem 2.3rem;
+    text-align: center;
+    border: 0.1rem dashed;
+}
+
+/* Estilos de Tabela Específicos */
+
+.borda-1 {
+    border-collapse: collapse;
+    /* Remove o espaço entre as bordas da tabela */
+    background-color: #ff8138;
+}
+
+.cabeçalho-objetivo {
+    background-color: #ff6600;
+}
+
+.linha-1obj {
+    background-color: #ff8138;
+}
+
+.linha-2obj {
+    background-color: #ff6600;
+}
+
+.linha-3obj {
+    background-color: #ff8138;
+}
+
+.linha-4obj {
+    background-color: #ff6600;
+}
+
+.linha-5obj {
+    background-color: #ff8138;
+}
+
+.contato {
+    /* Garante que a seção de contato se destaque um pouco */
+    background-color: var(--Topo);
+    /* Usa a cor do topo para o fundo da seção */
+    color: var(--black);
+    /* Garante que o texto seja legível sobre o fundo */
+    max-width: 90rem;
+    /* Limita a largura para melhor leitura, respeitando o body */
+    margin: 3rem auto;
+    /* Centraliza a seção e dá margem vertical */
+    border-radius: 1rem;
+    /* Borda arredondada para destacar */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.contato h1 {
+    font-size: 4rem;
+    /* Título principal da página */
+    margin-bottom: 0.5rem;
+}
+
+.contato p {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.formulario {
+    background-color: var(--white);
+    /* Fundo branco para o formulário */
+    padding: 3rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.formulario h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 0.2rem solid var(--Topo);
+    /* Linha divisória com a cor principal */
+    padding-bottom: 1rem;
+}
+
+.input-group {
+    margin-bottom: 2rem;
+}
+
+/* Estilo para todos os rótulos do formulário */
+.formulario label {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    /* Cor de texto mais suave para o rótulo */
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+/* Estilo para campos de texto, email e textarea */
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    color: var(--black);
+    /* Transição no foco */
+    transition: border-color 0.2s linear, box-shadow 0.2s linear;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario textarea:focus {
+    border-color: var(--main-color);
+    /* Borda destaca ao focar */
+    box-shadow: 0 0 0.5rem rgba(255, 129, 56, 0.5);
+    /* Sombra suave com a cor principal */
+}
+
+.formulario textarea {
+    resize: vertical;
+    /* Permite redimensionar apenas verticalmente */
+}
+
+/* Estilos para Radio Buttons e Checkboxes */
+.radius-group {
+    display: flex;
+    gap: 2rem;
+    /* Aumenta o espaço entre os grupos de rádio/checkbox */
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite quebrar linha em telas pequenas */
+}
+
+.radius-group label {
+    display: inline;
+    /* Retorna o label para inline para ficar ao lado do input */
+    margin-right: 1.4rem;
+    /* Aumenta o espaçamento à direita */
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+/* Estilo para os inputs de rádio/checkbox */
+.radius-group input[type="radio"],
+.radius-group input[type="checkbox"] {
+    margin-right: 0.3rem;
+}
+
+/* Efeito Hover nos botões (melhorando o seu estilo) */
+.formulario input[type="submit"]:hover,
+.formulario input[type="reset"]:hover {
+
+    background-color: var(--light-color);
+    /* Usa uma cor definida na variável */
+    transform: scale(1.15);
+    /* Pequeno efeito de zoom */
+    border: 0.1rem solid var(--black);
+    /* Adiciona uma borda inferior */
+    margin-right: 0.5rem;
+    /* Espaçamento direito */
+}
+
+.botoes-form {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border-color: #ff6600;
+    border-top: 0.1rem var(--Topo) solid;
+    padding-top: 1rem;
+    /* Adicionado para dar espaço entre a linha e os botões */
+    /*  */
+}
+
+.imagem-capa {
+    width: 100%;
+    /* Ocupa 100% da largura do contêiner pai (96rem do body) */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    margin-top: 2rem;
+    /* Espaço em cima */
+    margin-bottom: 3rem;
+    /* Espaço em baixo */
+    border: 0.2rem solid var(--black);
+    /* Uma borda preta que combina com o tema */
+    border-radius: 0.5rem;
+    /* Levemente arredondada */
+}
